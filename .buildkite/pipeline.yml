@@ -1,5 +1,6 @@
 steps:
   - label: ":python:"
     commands:
-      - pipenv install --deploy --dev
-      - pipenv run py.test
+      - pip install -r requirements/dev.txt
+      - python -m pip uninstall bk_cs_python_demo
+      - cloudsmith push python cloudsmith-test/buildkite-demo 'dist/*.whl'
