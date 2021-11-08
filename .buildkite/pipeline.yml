@@ -1,4 +1,4 @@
 steps:
   - label: ":python:"
     commands:
-      - python setup.py sdist bdist_wheel && cloudsmith push python cloudsmith-test/buildkite-demo dist/bk_cs_python_demo-0.0.1-py3-none-any.whl
+      - python setup.py sdist bdist_wheel && cloudsmith push python cloudsmith-test/buildkite-demo ./dist/bk_cs_python_demo-0.0.1-py3-none-any.whl
