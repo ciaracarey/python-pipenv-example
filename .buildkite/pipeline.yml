@@ -1,6 +1,5 @@
 steps:
   - label: ":python:"
     commands:
-      - pip install -r requirements/dev.txt
-      - python -m pip uninstall bk_cs_python_demo
+      - python setup.py sdist bdist_wheel
       - cloudsmith push python cloudsmith-test/buildkite-demo 'dist/*.whl'
