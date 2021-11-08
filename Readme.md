@@ -1,4 +1,4 @@
-# Buildkite Python Example (using pipenv)
+# Buildkite Python Example
 
 [![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new)
 
@@ -8,15 +8,7 @@ Note: this example assumes your Buildkite Agent machine has Python and pipenv al
 
 ## How does it work?
 
-The [pipeline.yml](.buildkite/pipeline.yml) installs your dependencies and runs [py.test](https://github.com/pytest-dev/pytest):
-
-```yml
-steps:
-  - label: ":python: Test"
-    commands:
-      - pipenv install --deploy --dev
-      - pipenv run py.test
-```
+The [pipeline.yml](.buildkite/pipeline.yml) 
 
 ## License
 
